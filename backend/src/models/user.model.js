@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+
+//cretaing the schema
 const userSchema =new mongoose.Schema(
     {
         email:{
@@ -24,6 +26,8 @@ const userSchema =new mongoose.Schema(
     {timestamps:true}
 );
 
+//cretaing the model
 const User=mongoose.model("User",userSchema);
 
+//exporing the model forol later use 
 export default User;
