@@ -56,10 +56,14 @@ export const sendMessage=async(req,res)=>{
         text,
         image:imageUrl,
      });
-
+     
+     //saiving to database
      await newMessage.save();
+      //real time functionality
+      res.status(201).json(newMessage);
 
    }catch(error){
-
+        console.log("Error in sendMessage Controller: ",error.message);
+       res.status(500).json({error:"Internal Server error"});
    }
 };
