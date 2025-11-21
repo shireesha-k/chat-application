@@ -20,13 +20,13 @@ export const protectRoute=async(req,res,next)=>{
          }
 
          //we dont send password back o he user it is not secure
-         const user=await User.findById(decoded.usrId).select("-password");
+         const user=await User.findById(decoded.userId).select("-password");
           //user not found
          if(!user){
             return res.status(404).json({message:"user not found"});
          }
 
-         req.user=uer;
+         req.user=user;
 
          next();
     }catch(error){
