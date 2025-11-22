@@ -7,6 +7,7 @@ import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 const App =()=>{
+  
   return(
     <div >
        <Navbar/>
