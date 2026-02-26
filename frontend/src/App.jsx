@@ -25,6 +25,7 @@ const App =()=>{
     );
 
   return(
+    <>
     <div >
        <Navbar/>
        <Routes>
@@ -37,6 +38,7 @@ const App =()=>{
 
        <Toaster />
     </div>
+    </>
   );
 };
 export default App;
