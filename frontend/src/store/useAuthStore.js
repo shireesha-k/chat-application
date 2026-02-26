@@ -50,7 +50,7 @@ export const useAuthStore = create((set)=>({
             } finally {
             set({ isLoggingIng: false });
             }
-                }
+            },
 
     // now a logout secction
     logout: async () => {
@@ -62,4 +62,7 @@ export const useAuthStore = create((set)=>({
             toast.error(error.response.data.message);
             }
         },
+
+    // To updat ean profile thsi function
+    
 }));
